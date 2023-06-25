@@ -1,0 +1,69 @@
+
+
+<div class="container">
+  <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+          <div class="row g-3" style="padding-top: 150px;">
+
+             
+               <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+
+              </div>
+
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+
+                  <div class="row g-3">
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                          <h1 style="color: rgb(25, 131, 224);">Here you can Login</h1>
+                          <p style="color: rgb(21, 127, 220);">Let's join us :</p>
+
+                          <label style="color: rgb(4, 104, 192);" for="" class="form-label">Email</label>
+                          <input [(ngModel)]="email" type="email" (ngModelChange)="onEmailChange()" class="form-control" required>
+                          <div *ngIf="emailInvalid">
+                              <div style="color: rgb(18, 118, 205);" *ngIf="emailRequired">Email is required.</div>
+                              <div style="color: rgb(29, 140, 237);" *ngIf="emailInvalidFormat">Email format is invalid.</div>
+                            </div>
+
+                      </div>
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                          <label style="color: rgb(20, 112, 194);" for="" class="form-label">Password</label>
+                          <input [(ngModel)]="password" type="password" (ngModelChange)="onPasswordChange()" class="form-control" required>
+                          <div *ngIf="passwordInvalid">
+                              <div style="color: rgb(9, 120, 217);" *ngIf="passwordRequired">Password is required.</div>
+                              <div  style="color: rgb(24, 58, 89);" *ngIf="passwordMinLength">Password should be at least 8 characters long.</div>
+                            </div>
+
+                      </div>
+                      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"style="text-align: center;padding-top: 30px;">
+                          <button style="background-color: #1242f1; /* Green */
+                              border: none;
+                              color: rgb(238, 233, 233);
+                              padding: 12px 30px;
+                              text-align: center;
+                              text-decoration: none;
+                              display: inline-block;
+                              
+                              font-size: 16px;
+                              margin: 4px 2px;
+                              cursor: pointer;
+                              border-radius: 10px;
+                              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" onmouseover="this.style.backgroundColor='#3e8e41'" onmouseout="this.style.backgroundColor='blue'" (click)="login()"  class="btn btn-primary">Login</button>
+                              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register"
+                              class="link-danger">Register</a></p>
+
+                      </div>
+                  </div>
+
+                  
+
+
+              </div>
+
+                  <div class="col col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+
+                  </div>
+          </div>
+      </div>
+  </div>
+</div>
